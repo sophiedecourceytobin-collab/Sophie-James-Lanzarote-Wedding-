@@ -1,0 +1,541 @@
+:root {
+  --bg: #f7f5f3;
+  --accent: #c2a68d;
+  --accent-light: #f4eee8;
+  --panel: #f2d6dc;
+  --text: #0b0b0b;
+  --text-soft: #666;
+}
+
+/* =========================
+   BASE
+   ========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: var(--bg);
+  color: var(--text);
+  letter-spacing: 0.3px;
+
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+/* =========================
+   HERO HEADER
+   ========================= */
+.hero {
+  background: #c1d0b5; /* soft pastel */
+  text-align: center;
+  padding: 30px 20px; /* compact vertical padding */
+}
+
+.hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2rem; /* slightly smaller for compact layout */
+  margin: 0 0 12px 0;
+  color: #072a0f;
+}
+
+.key-info {
+  font-size: 1rem; /* compact font size */
+  margin-bottom: 18px;
+  color: #072a0f;
+  line-height: 1.4; /* tighter line spacing */
+}
+
+/* =========================
+   COUNTDOWN
+   ========================= */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 16px 0;
+  flex-wrap: wrap;
+  font-family: 'Georgia', serif;
+}
+
+.countdown-item {
+  background: var(--accent-light); /* soft neutral background */
+  color: var(--text);
+  border-radius: 12px;
+  padding: 10px 14px; /* compact but readable */
+  min-width: 60px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.countdown-item span {
+  display: block;
+  font-size: 1.2rem; /* easy to read */
+  font-weight: bold;
+}
+
+.countdown-item small {
+  font-size: 0.75rem; /* subtle label */
+  display: block;
+  color: var(--text-soft);
+}
+
+.countdown-item:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================
+   FAQ BUTTON
+   ========================= */
+.story-button {
+  display: inline-block;
+  margin-top: 12px; /* tighter spacing */
+  padding: 12px 28px; /* smaller button for compact layout */
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--accent);
+  border-radius: 40px;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.story-button:hover {
+  background-color: #b5967d;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 720px) {
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .key-info {
+    font-size: 0.95rem;
+  }
+
+  .countdown-item {
+    min-width: 50px;
+    padding: 8px 10px;
+  }
+
+  .story-button {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+}
+/* =========================
+   LAYOUT
+   ========================= */
+
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+section {
+  background: #fff; /* white background instead of pink */
+  border: 2px solid var(--accent); /* accent border like Dress Code */
+  border-radius: 16px; /* rounded corners */
+  padding: 28px; /* inner spacing */
+  margin-bottom: 28px; /* spacing between sections */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12); /* soft shadow like Dress Code */
+  transition: transform 0.3s ease; /* optional hover lift */
+}
+
+section:hover {
+  transform: translateY(-3px); /* subtle hover effect */
+}
+
+h2 {
+  margin-top: 0;
+  border-bottom: 2px solid #000;
+  padding-bottom: 10px;
+}
+
+/* =========================
+   IMAGES & MAP
+   ========================= */
+
+.image-box {
+  max-width: 420px;
+  height: 280px;
+  margin-top: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #000;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.map-container {
+  margin-top: 16px;
+  height: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* =========================
+   RSVP FORM
+   ========================= */
+
+.rsvp-form {
+  display: grid;
+  gap: 16px;
+  margin-top: 18px;
+  max-width: 700px;
+}
+
+.rsvp-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+}
+
+.rsvp-form input,
+.rsvp-form select,
+.rsvp-form textarea {
+  margin-top: 8px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #999;
+  font-family: Georgia, serif;
+}
+
+.rsvp-form button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.rsvp-form button:hover {
+  opacity: 0.9;
+}
+
+.rsvp-note {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+
+/* =========================
+   COLOUR PALETTE
+   ========================= */
+
+.colour-palette {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.colour-item {
+  flex: 1;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.colour {
+  height: 60px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.blush { background: #f4c2c2; }
+.lilac { background: #d8c2e0; }
+.yellow { background: #f6e7b4; }
+.blue { background: #bcd4e6; }
+
+.avoid .colour {
+  opacity: 0.6;
+  border: 1px dashed #aaa;
+}
+
+.white { background: #fff; }
+.cream { background: #f5f1e8; }
+.green { background: #c1d0b5; }
+
+.avoid span {
+  color: #a94442;
+}
+/* =========================
+   EYE BOX (highlight card)
+   ========================= */
+
+.eye-box {
+  background: #fff; /* white background for focus */
+  border: 2px solid var(--accent); /* accent border */
+  border-radius: 16px; /* rounded corners */
+  padding: 30px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12); /* soft shadow */
+  transition: transform 0.3s ease;
+}
+
+.eye-box:hover {
+  transform: translateY(-3px);
+}
+/* Dress Code colour boxes */
+.colour {
+  height: 60px;
+  border-radius: 8px;
+  border: 2px solid var(--accent); /* thicker accent border to make it pop */
+}
+
+/* Optional: slightly increase spacing for clarity */
+.colour-item {
+  flex: 1;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #555;
+  padding: 4px; /* add a little padding around the colour */
+}/* Avoid colours */
+.avoid .colour {
+  opacity: 0.6;                /* muted */
+  border: 2px dashed var(--accent); /* dashed accent border */
+  border-radius: 8px;          /* keep rounded corners */
+}
+
+/* Text for avoid colours */
+.avoid span {
+  color: #a94442; /* warning color */
+  margin-top: 4px; /* small spacing from box */
+  display: block;
+}
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+  background: var(--accent);
+  color: #fff;
+  text-align: center;
+  padding: 28px 16px;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 720px) {
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .image-box {
+    height: 200px;
+  }
+
+  .map-container {
+    height: 240px;
+  }
+}
+.faq-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  text-align: left;
+}
+
+.faq-table th,
+.faq-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.faq-table th {
+  border-bottom: 2px solid #ccc;
+  font-weight: bold;
+}
+
+.faq-table tr:hover {
+  background: #f9f9f9; /* subtle hover */
+}
+
+.faq-table td {
+  vertical-align: middle;
+}
+
+.faq-table th:first-child,
+.faq-table td:first-child {
+  text-align: left; /* first column left-aligned */
+}
+
+.faq-table th:nth-child(2),
+.faq-table td:nth-child(2),
+.faq-table th:nth-child(3),
+.faq-table td:nth-child(3) {
+  text-align: center; /* time & price columns centered */
+}
+
+
+.rsvp-section {
+  background-color: #f5f7fa;
+}
+
+.rsvp-section h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.rsvp-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.rsvp-btn {
+  background-color: #4285F4;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.rsvp-btn:hover {
+  background-color: #3367d6;
+}
+
+#rsvpForm {
+  margin-top: 30px;
+  border: none;
+  width: 100%;
+  height: 600px;
+  display: none;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+
+
+.card h3 {
+  margin-top: 0;
+}
+
+.location {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  margin-bottom: 8px;
+}
+.cards.luxury {
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  border-top: 3px solid var(--accent);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card.featured {
+  border-top: 3px solid gold;
+}
+
+.stars {
+  font-size: 0.9rem;
+  color: #caa86b;
+  margin-left: 6px;
+}
+
+.links {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.links a {
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: var(--accent);
+  border-bottom: 1px solid transparent;
+}
+
+.links a:hover {
+  border-bottom: 1px solid var(--accent);
+}
+.favorite::after {
+  content: "Our Pick";
+  font-size: 0.7rem;
+  margin-left: 8px;
+  color: gold;
+}
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.timeline li {
+  display: grid;
+  grid-template-columns: 80px 40px 1fr;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.timeline .time {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.icon-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.timeline .text {
+  font-size: 1rem;
+}.timeline li {
+  transition: all 0.3s ease;
+}
+
+.timeline li:hover {
+  transform: translateX(5px);
+}
