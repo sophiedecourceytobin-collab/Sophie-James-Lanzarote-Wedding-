@@ -1,5 +1,5 @@
 /* =========================
-   COUNTDOWN (Index Page)
+   COUNTDOWN (INDEX PAGE)
    ========================= */
 
 (function () {
@@ -8,11 +8,10 @@
   const minutesEl = document.getElementById('minutes');
   const secondsEl = document.getElementById('seconds');
 
-  // Stop if countdown elements don’t exist
+  // Safe exit if not on index page
   if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
 
-  // ⚠️ Adjust timezone if needed (Lanzarote = UTC / GMT, no DST)
-  const target = new Date('2027-03-14T15:00:00Z').getTime();
+  const target = new Date('2027-03-10T15:00:00').getTime();
 
   function updateCountdown() {
     const now = Date.now();
@@ -43,6 +42,73 @@
   setInterval(updateCountdown, 1000);
 })();
 
-document.getElementById("rsvpBtn").addEventListener("click", function () {
-  document.getElementById("rsvpForm").style.display = "block";
+
+/* =========================
+   RSVP BUTTON (SAFE)
+   ========================= */
+
+(function () {
+  const rsvpBtn = document.getElementById("rsvpBtn");
+  const rsvpForm = document.getElementById("rsvpForm");
+
+  if (!rsvpBtn || !rsvpForm) return;
+
+  rsvpBtn.addEventListener("click", function () {
+    rsvpForm.style.display = "block";
+    rsvpForm.scrollIntoView({ behavior: "smooth" });
+  });
+})();
+
+
+/* =========================
+   MUSIC TOGGLE (LUXURY UX)
+   ========================= */
+
+(function () {
+  const btn = document.getElementById("musicBtn");
+  const music = document.getElementById("bgMusic");
+
+  if (!btn || !music) return;
+
+  // start muted (important for UX + autoplay rules)
+  music.volume = 0.6;
+
+  btn.addEventListener("click", () => {
+    if (music.paused) {
+      music.play();
+      btn.textContent = "⏸ Pause Music";
+      btn.classList.add("playing");
+    } else {
+      music.pause();
+      btn.textContent = "🎵 Play Wedding Vibes";
+      btn.classList.remove("playing");
+    }
+  });
+})();
+
+
+/* =========================
+   SMOOTH SCROLL (NAV POLISH)
+   ========================= */
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const target = document.querySelector(this.getAttribute("href"));
+
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  });
 });
+const btn = document.getElementById("backToTop");
+
+window.onscroll = () => {
+  btn.style.display = window.scrollY > 300 ? "block" : "none";
+};
+
+btn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
