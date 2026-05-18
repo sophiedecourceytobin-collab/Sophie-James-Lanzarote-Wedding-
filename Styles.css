@@ -587,22 +587,18 @@ footer {
 
 /* =========================
    MOBILE IMPROVEMENT (optional safety)
-/* =========================
-   FINAL MOBILE POLISH FIX
    ========================= */
-
 @media (max-width: 600px) {
   .sticky-nav {
-    padding: 10px 8px;
-    gap: 6px;
+    justify-content: flex-start;
+    gap: 8px;
   }
 
   .sticky-nav a {
-    font-size: 0.82rem;
-    padding: 7px 12px;
+    font-size: 0.85rem;
+    padding: 8px 12px;
   }
 }
-
 html {
   scroll-behavior: smooth;
 }
@@ -624,6 +620,77 @@ section {
   bottom: 20px;
   right: 20px;
   display: none;
+}
+.food-section {
+  padding: 80px 20px;
+  background: #f9f6f2;
+  display: flex;
+  justify-content: center;
+}
+
+.food-card {
+  max-width: 700px;
+  width: 100%;
+  background: #ffffff;
+  padding: 50px 40px;
+  border-radius: 24px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  border: 1px solid #eee3d6;
+}
+
+.food-card h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #7a5c45;
+  font-family: "Georgia", serif;
+}
+
+.dietary-note {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.menu-divider {
+  font-size: 1.5rem;
+  color: #c7a17a;
+  margin-bottom: 30px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.menu-item {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0e6dc;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.course {
+  display: block;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #b08968;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.menu-item h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #333;
+  font-family: "Georgia", serif;
+  font-weight: normal;
 }
 
 @media (max-width: 600px) {
