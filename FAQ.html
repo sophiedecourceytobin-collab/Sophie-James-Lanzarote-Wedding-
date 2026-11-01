@@ -7,18 +7,21 @@
   <link rel="stylesheet" href="Styles.css" />
 </head>
 <body>
-  
+
 <header class="hero" role="banner" aria-label="Hero: Sophie and James wedding">
   <div class="hero-inner">
-
     <h1>Sophie &amp; James</h1>
 
     <p class="key-info">
-      <strong>10 March 2027</strong> | Ceremony at <strong>3:00 PM</strong> | <strong>H10 Rubicón Horizon Collections, Lanzarote</strong>
+      <strong>10 March 2027</strong> |
+      <strong>2:30 PM</strong> |
+      <strong>H10 Rubicón Horizons Collection, Lanzarote</strong>
     </p>
-<p class="rsvp-deadline">
-  📅 RSVP deadline: <strong>31 October 2026</strong>
-</p>
+
+    <p class="rsvp-deadline">
+      📅 RSVP deadline: <strong>31 October 2026</strong>
+    </p>
+
     <div class="countdown" aria-live="polite" aria-atomic="true">
       <div class="countdown-item">
         <span id="days">0</span>
@@ -39,372 +42,408 @@
     </div>
 
     <a href="index.html" class="story-button">Wedding Day</a>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScNASIlrc_pmaI7GhOu7lboGWz-QasQZGJTLqLWf3YtJgB80Q/viewform" target="_blank" class="story-button">
+
+
+    <a id="rsvp-button"
+       href="https://docs.google.com/forms/d/e/1FAIpQLScNASIlrc_pmaI7GhOu7lboGWz-QasQZGJTLqLWf3YtJgB80Q/viewform"
+       target="_blank"
+       class="story-button">
       RSVP Here
     </a>
 
-  </div>
-</header>
+    </div>
+    </header>
+
+    <script>
+      if (new Date() >= new Date("2026-11-01T00:00:00")) {
+        document.getElementById("rsvp-button").style.display = "none";
+      }
+    </script>
+
 
 <main class="main-content">
-
   <div class="eye-box">
-    
-<nav class="sticky-nav">
-  <a href="#essentials">Essentials</a>
-  <a href="#accommodation">Accommodation</a>
-  <a href="#stay-recommendations">Where to Stay</a>
-  <a href="#things-to-do">Things To Do</a>
-  <a href="#food-drink">Food & Drink</a>
-</nav>
-  
-<section id="essentials">
-  <h2>💼 Money & Essentials</h2>
-  <p class="section-intro">A few handy tips for your trip ✨</p>
 
-  <ul>
-    <li>💳 Most places accept card, but carry some cash 💶</li>
-    <li>💶 Currency: Euro (€)</li>
-    <li>🔌 Plug type: European (Type C & F)</li>
-    <li>🕶️ Sunscreen is essential even in March ☀️</li>
-  </ul>
+    <nav class="sticky-nav" aria-label="Guest travel guide navigation">
+      <a href="#essentials">Essentials</a>
+      <a href="#travel">Getting Here</a>
+      <a href="#accommodation">Accommodation</a>
+      <a href="#things-to-do">Things To Do</a>
+      <a href="#food-drink">Food &amp; Drink</a>
+    </nav>
+
+    <!-- ESSENTIALS -->
+    <section id="essentials">
+      <h2>💼 Travel Essentials</h2>
+      <p class="section-intro">
+        A few handy reminders to help you get ready for Lanzarote ✨
+      </p>
+
+      <ul>
+        <li>🛂 Check that your passport is valid for your trip.</li>
+        <li>🛡️ Arrange suitable travel insurance.</li>
+        <li>📩 Submit your wedding RSVP by 31 October 2026.</li>
+        <li>🏨 Book your accommodation and flights in advance.</li>
+        <li>💃 Plan your wedding outfit before travelling.</li>
+        <li>💶 Currency: Euro (€).</li>
+        <li>💳 Cards are widely accepted, but carrying some cash is useful.</li>
+        <li>🔌 Plug type: European Type C and F.</li>
+        <li>🕶️ Bring sunscreen, sunglasses and light clothing, even in March.</li>
+      </ul>
+    </section>
+
+    <!-- TRAVEL -->
+    <section id="travel">
+      <h2>✈️ Getting to Lanzarote</h2>
+
+      <p>
+        We recommend booking flights early for your March trip 🌴.
+        Lanzarote Airport (ACE), near Arrecife, is the island's main airport.
+      </p>
+
+      <p>
+        🚕 Taxis, 🚗 car hire and 🚐 transfer services are available.
+        For group transfers, take a look at
+        <a href="https://www.lastminute-transfer.com/"
+           target="_blank"
+           rel="noopener noreferrer">Last Minute Transfers</a>.
+      </p>
+
+      <p><strong>Estimated travel times and prices from the airport:</strong></p>
+
+      <div class="faq-table-container">
+        <table class="faq-table">
+          <thead>
+            <tr>
+              <th style="text-align:left;">🚍 Transport</th>
+              <th style="text-align:left;">📍 Puerto del Carmen</th>
+              <th style="text-align:left;">📍 Playa Blanca</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align:left;"><strong>🚌 Bus</strong></td>
+              <td style="text-align:left;">15 mins | €3 per person</td>
+              <td style="text-align:left;">45 mins | €7 per person</td>
+            </tr>
+            <tr>
+              <td style="text-align:left;"><strong>🚕 Taxi</strong></td>
+              <td style="text-align:left;">10 mins | €20</td>
+              <td style="text-align:left;">35 mins | €55</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="section-intro">
+        💡 Journey times and fares are estimates. Check current routes,
+        timetables and prices before travelling.
+      </p>
 </section>
 
-<section id="checklist">
-  <h2>🧳 Before You Travel</h2>
-  <p class="section-intro">A quick checklist before you fly ✈️</p>
+    <!-- ACCOMMODATION -->
+    <section id="accommodation">
+      <h2>🏨 Where to Stay</h2>
 
-  <ul>
-    <li>🛂 Passport in date</li>
-    <li>🛡️ Travel insurance</li>
-    <li>🏨 Accommodation booked</li>
-    <li>📩 RSVP submitted</li>
-    <li>💃 Outfit planned</li>
-  </ul>
-</section>
-
-<section id="travel">
-  <h2>✈️ Travel</h2>
-  <p>
-    We recommend booking flights early as March is a popular time in Lanzarote 🌴
+  <p class="section-intro">
+    Whether you're looking for a luxury beachfront hotel, a
+    budget-friendly resort or somewhere close to the wedding venue,
+    here are three accommodation options to consider ✨.
   </p>
-  <p>
-    ✈️ Lanzarote Airport (ACE) is the island’s only airport.<br />
-    🚕 Taxis, 🚗 car hire, and 🚐 shuttle services are readily available.<br />
-    🚌 Arrecife Airport offers car hire, public buses, and a taxi rank.<br />
-    👨‍👩‍👧‍👦 For groups, you can also use 
-    <a href="https://www.lastminute-transfer.com/" target="_blank">Last Minute Transfers</a>.
-  </p>
 
-  <p><strong>Estimated travel times and prices from the airport:</strong></p>
+      <ul>
+        <li><strong>📍 Playa Blanca:</strong> Closest to the venue, with beaches,
+          a scenic promenade and a relaxed atmosphere.</li>
+        <li><strong>🎉 Puerto del Carmen:</strong> Lively, with plenty of
+          restaurants, bars and nightlife.</li>
+        <li><strong>🌊 Costa Teguise:</strong> A quieter resort with beaches
+          and family-friendly options.</li>
+      </ul>
 
-  <div class="faq-table-container">
-<table class="faq-table">
-  <thead>
-    <tr>
-      <th style="text-align:left;">🚍 Transport</th>
-      <th style="text-align:left;">📍 Puerto del Carmen</th>
-      <th style="text-align:left;">📍 Playa Blanca</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left;"><strong>🚌 Bus</strong></td>
-      <td style="text-align:left;">15 mins &nbsp;|&nbsp; €3 per person</td>
-      <td style="text-align:left;">45 mins &nbsp;|&nbsp; €7 per person</td>
-    </tr>
-    <tr>
-      <td style="text-align:left;"><strong>🚕 Taxi</strong></td>
-      <td style="text-align:left;">10 mins &nbsp;|&nbsp; €20</td>
-      <td style="text-align:left;">35 mins &nbsp;|&nbsp; €55</td>
-    </tr>
-  </tbody>
-</table>
-  </div>
-</section>
-<section id="accommodation">
-  <h2>🏨 Accommodation</h2>
-  <p>
-    We recommend staying at the venue or in nearby areas such as Playa Blanca 🌴 or Puerto del Carmen 🌊.
-  </p>
-  <p><strong>🔎 Booking websites:</strong></p>
-  <ul>
-    <li>🌐 <a href="https://www.loveholidays.com" target="_blank">Love Holidays</a></li>
-    <li>🛏️ <a href="https://www.booking.com" target="_blank">Booking.com</a></li>
-    <li>🏡 <a href="https://www.simplyowners.net" target="_blank">Simply Owners</a></li>
-  </ul>
-  <p>💬 If you need any help choosing where to stay, feel free to contact us.</p>
-</section>
-    
-<section id="stay-recommendations">
-  <h2>📍 Where to Stay</h2> 
-  <p class="section-intro">Best areas depending on your vibe ✨</p>
+      <p>
+        We recommend staying at the wedding venue the night before and the
+        night of the wedding if possible. If you're staying elsewhere, please
+        remember to organise transport to and from the venue.
+      </p>
 
-  <ul>
-    <li><strong>📍 Playa Blanca:</strong> Closest to venue, relaxed, scenic 🌴</li>
-    <li><strong>🎉 Puerto del Carmen:</strong> Lively, great nightlife & restaurants 🍸</li>
-    <li><strong>🌊 Costa Teguise:</strong> Quiet and family-friendly 👨‍👩‍👧‍👦</li>
-  </ul>
+      <p><strong>🔎 Useful booking websites:</strong></p>
+      <ul>
+        <li>🌐 <a href="https://www.loveholidays.com"
+          target="_blank" rel="noopener noreferrer">Love Holidays</a></li>
+        <li>🛏️ <a href="https://www.booking.com"
+          target="_blank" rel="noopener noreferrer">Booking.com</a></li>
+        <li>🏡 <a href="https://www.simplyowners.net"
+          target="_blank" rel="noopener noreferrer">Simply Owners</a></li>
+      </ul>
 
-<p class="section-intro">Handpicked stays for comfort, location, style, and great dining options 🏨</p>
-<p class="section-intro">We recommend staying at the H10 Rubicón Horizon Collection the day before and the day of the wedding to minimise stress and travel on the big day 🏨</p>
-<p class="section-intro">If you choose to stay elsewhere, please note that you will need to arrange your own transport to and from the venue. Taxis from the evening through to early morning can be scarce, so we recommend planning ahead 🚕</p>
+      <p>
+        💬 If you need help choosing where to stay, feel free to contact us.
+      </p>
 
-  <div class="cards luxury">
+      <h3>✨ Our Accommodation Suggestions</h3>
+      <p class="section-intro">
+        A selection of stays to help you compare locations and accommodation
+        styles. Prices are indicative only and can vary by date, room type,
+        board basis and availability.
+      </p>
 
-    <!-- H10 Rubicón Palace -->
-    <div class="card featured">
-      <h3>🏨 H10 Rubicón Horizon Collections <span class="stars">★★★★★</span></h3>
-      <p class="location">📍 Playa Blanca (Wedding Venue 💍)</p>
-      <p>Stay at the venue for the full wedding experience ✨ Multiple pools available 🏊</p>
-      <p><strong>Board Options:</strong> Room Only/B&B €140–€180, Half Board €170–€210, All Inclusive €200–€260</p>
+      <div class="cards luxury">
 
-      <div class="links">
-        <a href="https://www.h10hotels.com" target="_blank">🌐 Official Website</a>
-        <a href="https://www.tripadvisor.com" target="_blank">🔎 View on TripAdvisor</a>
-        <a href="https://maps.google.com/?q=H10+Rubicon+Palace" target="_blank">📍 View on Maps</a>
+        <!-- WEDDING VENUE -->
+        <div class="card featured">
+          <h3>🏨 H10 Rubicón Horizons Collection
+            <span class="stars">★★★★★</span>
+          </h3>
+          <p class="location">📍 Playa Blanca — Wedding Venue 💍</p>
+          <p>
+            Stay at the venue for the full wedding experience, with multiple
+            pools and facilities available 🏊.
+          </p>
+          <p>
+            <strong>Indicative board options:</strong>
+            Room Only/B&amp;B €140–€180, Half Board €170–€210,
+            All Inclusive €200–€260.
+          </p>
+          <div class="links">
+            <a href="https://www.h10hotels.com"
+               target="_blank" rel="noopener noreferrer">🌐 Official Website</a>
+            <a href="https://www.tripadvisor.com"
+               target="_blank" rel="noopener noreferrer">🔎 TripAdvisor</a>
+            <a href="https://maps.google.com/?q=H10+Rubicon+Palace"
+               target="_blank" rel="noopener noreferrer">📍 View on Maps</a>
+          </div>
+        </div>
+
+        <!-- PRINCESA YAIZA -->
+        <div class="card">
+          <h3>🌟 Princesa Yaiza Suite Hotel
+            <span class="stars">★★★★★</span>
+          </h3>
+          <p class="location">📍 Playa Blanca</p>
+          <p>Luxury beachfront hotel with lagoon-style pools 🏖️.</p>
+          <p>
+            <strong>Indicative board options:</strong>
+            B&amp;B €220–€260, Half Board €260–€320.
+          </p>
+          <div class="links">
+            <a href="https://www.booking.com"
+               target="_blank" rel="noopener noreferrer">🛏️ Booking.com</a>
+            <a href="https://www.tripadvisor.com"
+               target="_blank" rel="noopener noreferrer">🔎 TripAdvisor</a>
+            <a href="https://maps.google.com/?q=Princesa+Yaiza+Lanzarote"
+               target="_blank" rel="noopener noreferrer">📍 View on Maps</a>
+          </div>
+        </div>
+
+        <!-- LANZASUR CLUB -->
+        <div class="card">
+          <h3>🌊 Relaxia Lanzasur Club
+            <span class="stars">★★★☆☆</span>
+          </h3>
+          <p class="location">📍 Playa Blanca</p>
+          <p>Budget-friendly resort with pools and waterpark access 💦.</p>
+          <p>
+            <strong>Indicative board options:</strong>
+            Self-Catering €90–€120, All Inclusive €120–€160.
+          </p>
+          <div class="links">
+            <a href="https://www.booking.com"
+               target="_blank" rel="noopener noreferrer">🛏️ Booking.com</a>
+            <a href="https://www.tripadvisor.com"
+               target="_blank" rel="noopener noreferrer">🔎 TripAdvisor</a>
+            <a href="https://maps.google.com/?q=Relaxia+Lanzasur+Club"
+               target="_blank" rel="noopener noreferrer">📍 View on Maps</a>
+          </div>
+        </div>
+
+
       </div>
-    </div>
+    </section>
 
-    <!-- Princesa Yaiza -->
-    <div class="card">
-      <h3>🌟 Princesa Yaiza Suite Hotel <span class="stars">★★★★★</span></h3>
-      <p class="location">📍 Playa Blanca</p>
-      <p>Luxury beachfront hotel with lagoon-style pools 🏖️</p>
-      <p><strong>Board Options:</strong> B&B €220–€260, Half Board €260–€320</p>
+    <!-- THINGS TO DO -->
+    <section id="things-to-do">
+      <div class="activity-card single">
+        <h2>🌴 Things To Do in Lanzarote</h2>
 
-      <div class="links">
-        <a href="https://www.booking.com" target="_blank">🛏️ Book on Booking.com</a>
-        <a href="https://www.tripadvisor.com" target="_blank">🔎 View on TripAdvisor</a>
-        <a href="https://maps.google.com/?q=Princesa+Yaiza+Lanzarote" target="_blank">📍 View on Maps</a>
+        <p>
+          From wildlife parks and local markets to island-hopping adventures,
+          there's plenty to explore. We recommend checking availability and
+          booking popular excursions in advance.
+        </p>
+
+        <p>
+          For organised trips and activities, visit
+          <a href="https://www.travelon.world/"
+             target="_blank" rel="noopener noreferrer">TravelOnWorld</a>.
+        </p>
+
+        <p class="sub">Transport, timings and excursion options at a glance</p>
+
+        <hr>
+
+        <div class="activity-block">
+          <h4>🐾 Rancho Texas Lanzarote Park — Day Visit</h4>
+          <p>🚕 Puerto del Carmen: 5 mins (€5–€8)</p>
+          <p>🚌 Puerto del Carmen: approximately 20 mins (€2–€3)</p>
+          <p>🚕 Playa Blanca: 25 mins (€30–€35)</p>
+          <p>🚌 Playa Blanca: approximately 40 mins (€3–€4)</p>
+          <p>🎟️ Indicative admission: approximately €40</p>
+          <p>✔ Check the park's current shuttle options before travelling.</p>
+        </div>
+
+        <hr>
+
+        <div class="activity-block">
+          <h4>🌙 Rancho Texas — Country Night</h4>
+          <p>🚕 Puerto del Carmen: 5–10 mins (€5–€8)</p>
+          <p>🚕 Playa Blanca: approximately 25 mins (€30–€35)</p>
+          <p>🎟️ Indicative price: approximately €45</p>
+          <p>✔ Check current transfer arrangements when booking.</p>
+        </div>
+
+        <hr>
+
+        <div class="activity-block">
+          <h4>🛍️ Teguise Market — Sunday, 09:00–14:00</h4>
+          <p>🚕 Puerto del Carmen: 20 mins (€20–€25)</p>
+          <p>🚌 Puerto del Carmen: 30–40 mins (€2–€4)</p>
+          <p>🚕 Playa Blanca: 45–50 mins (€45–€50)</p>
+          <p>🚌 Playa Blanca: 60–75 mins (€3–€4)</p>
+          <p>💰 Indicative guided excursion: €15–€25 per person</p>
+        </div>
+
+        <hr>
+
+        <div class="activity-block">
+          <h4>🌊 Playa Blanca Market — Wednesday &amp; Saturday, 09:00–14:00</h4>
+          <p>🚕 Puerto del Carmen: approximately 30 mins (€35–€40)</p>
+          <p>🚕 Within Playa Blanca: approximately 5–10 mins (€5–€7)</p>
+          <p>🚌 Within Playa Blanca: approximately 10–15 mins (€1.40)</p>
+          <p>💰 Optional excursions may be available.</p>
+        </div>
+
+        <hr>
+
+        <div class="activity-block">
+          <h4>⛴️ Fuerteventura Day Trip — Corralejo</h4>
+          <p>🚕 Journey to Playa Blanca port: approximately 5–30 mins,
+            depending on where you're staying.</p>
+          <p>⛴️ Ferry crossing: approximately 25–30 mins.</p>
+          <p>💰 Indicative packages: €35–€50 per person.</p>
+          <p>✔ Check ferry times, fares and excursion inclusions before booking.</p>
+        </div>
+
+        <p class="section-intro">
+          💡 Travel times and prices are estimates and may change.
+          Check current information before setting off.
+        </p>
       </div>
-    </div>
+    </section>
 
-    <!-- Hotel THB Royal -->
-    <div class="card">
-      <h3>🏨 Hotel THB Royal <span class="stars">★★★☆☆</span></h3>
-      <p class="location">📍 Playa Blanca</p>
-      <p>Quiet hotel with 2 outdoor pools 🏊</p>
-      <p><strong>Board Options:</strong> Self-Catering €90–€110, B&B €100–€130, Half Board €120–€150</p>
+    <!-- FOOD AND DRINK -->
+    <section id="food-drink">
+      <h2>🍽️ Restaurants &amp; Bars</h2>
+      <p class="section-intro">
+        A few ideas for dining 🍴, drinks 🍸 and brunch 🥞 while exploring
+        Lanzarote. Check opening hours and book ahead where necessary.
+      </p>
 
-      <div class="links">
-        <a href="https://www.booking.com" target="_blank">🛏️ Book on Booking.com</a>
-        <a href="https://www.tripadvisor.com" target="_blank">🔎 View on TripAdvisor</a>
-        <a href="https://maps.google.com/?q=THB+Royal+Playa+Blanca" target="_blank">📍 View on Maps</a>
+      <div class="cards luxury">
+
+        <div class="card">
+          <h3>🍛 Namaste India <span class="stars">★★★★☆</span></h3>
+          <p class="location">📍 Playa Blanca</p>
+          <p>Indian cuisine with a range of dishes to choose from 🍽️.</p>
+          <div class="links">
+            <a href="https://maps.google.com/?q=Namaste+India+Playa+Blanca+Lanzarote"
+               target="_blank" rel="noopener noreferrer">📍 View on Maps</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>🥩 La Cascada <span class="stars">★★★★☆</span></h3>
+          <p class="location">📍 Old Town, Puerto del Carmen</p>
+          <p>Restaurant known for steak, seafood and a cosy atmosphere ✨.</p>
+          <div class="links">
+            <a href="https://maps.google.com/?q=La+Cascada+Puerto+del+Carmen"
+               target="_blank" rel="noopener noreferrer">📍 View on Maps</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>🍸 Universo <span class="stars">★★★★☆</span></h3>
+          <p class="location">📍 Puerto del Carmen</p>
+          <p>A café and cocktail-bar option for drinks and a relaxed evening 🍹.</p>
+          <div class="links">
+            <a href="https://maps.google.com/?q=Universo+Puerto+del+Carmen"
+               target="_blank" rel="noopener noreferrer">📍 View on Maps</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>🥞 Pinocchio <span class="stars">★★★★☆</span></h3>
+          <p class="location">📍 Puerto del Carmen</p>
+          <p>A handy option to consider for brunch and casual meals 🥐.</p>
+          <div class="links">
+            <a href="https://maps.google.com/?q=Pinocchio+Puerto+del+Carmen"
+               target="_blank" rel="noopener noreferrer">📍 View on Maps</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>🥗 La Kalma <span class="stars">★★★★☆</span></h3>
+          <p class="location">📍 Puerto del Carmen</p>
+          <p>A relaxed brunch option with healthy choices 🥑.</p>
+          <div class="links">
+            <a href="https://maps.google.com/?q=La+Kalma+Puerto+del+Carmen"
+               target="_blank" rel="noopener noreferrer">📍 View on Maps</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>🍺 Heineken Bar <span class="stars">★★★★☆</span></h3>
+          <p class="location">📍 Puerto del Carmen</p>
+          <p>A lively option for drinks and an evening out 🎶.</p>
+          <div class="links">
+            <a href="https://maps.google.com/?q=Heineken+Bar+Puerto+del+Carmen"
+               target="_blank" rel="noopener noreferrer">📍 View on Maps</a>
+          </div>
+        </div>
+
       </div>
-    </div>
+    </section>
 
-    <!-- Relaxia Lanzasur Club -->
-    <div class="card">
-      <h3>🌊 Relaxia Lanzasur Club <span class="stars">★★★☆☆</span></h3>
-      <p class="location">📍 Playa Blanca</p>
-      <p>Budget-friendly resort with pools and waterpark access 💦</p>
-      <p><strong>Board Options:</strong> Self-Catering €90–€120, All Inclusive €120–€160</p>
+    <!-- SHORT ISLAND HIGHLIGHT -->
+    <section id="island-history">
+      <h2>🌋 A Little About Lanzarote</h2>
+      <p class="section-intro">
+        Lanzarote is known for its dramatic volcanic landscapes, beautiful
+        beaches and distinctive architecture.
+      </p>
 
-      <div class="links">
-        <a href="https://www.booking.com" target="_blank">🛏️ Book on Booking.com</a>
-        <a href="https://www.tripadvisor.com" target="_blank">🔎 View on TripAdvisor</a>
-        <a href="https://maps.google.com/?q=Relaxia+Lanzasur+Club" target="_blank">📍 View on Maps</a>
+      <div class="history-content">
+        <p>
+          🌋 The island's volcanic landscape was dramatically reshaped by
+          eruptions between 1730 and 1736, particularly around Timanfaya.
+        </p>
+
+        <p>
+          🎨 Local artist César Manrique helped shape Lanzarote's approach
+          to architecture and tourism, encouraging development that respects
+          the island's natural surroundings.
+        </p>
+
+        <p>
+          🍷 Lanzarote is also known for its distinctive vineyards, where
+          vines grow in volcanic soil protected by curved stone walls.
+        </p>
       </div>
-    </div>
+    </section>
 
-    <!-- Hotel Las Costas -->
-    <div class="card">
-      <h3>🏖️ Hotel Las Costas <span class="stars">★★★★☆</span></h3>
-      <p class="location">📍 Puerto del Carmen</p>
-      <p>Beachfront hotel with heated outdoor pool ☀️</p>
-      <p><strong>Board Options:</strong> B&B €140–€170, Half Board €170–€200</p>
-
-      <div class="links">
-        <a href="https://www.booking.com" target="_blank">🛏️ Book on Booking.com</a>
-        <a href="https://www.tripadvisor.com" target="_blank">🔎 View on TripAdvisor</a>
-        <a href="https://maps.google.com/?q=Hotel+Las+Costas+Puerto+del+Carmen" target="_blank">📍 View on Maps</a>
-      </div>
-    </div>
-
-    <!-- Apartamentos Panorama -->
-    <div class="card">
-      <h3>🏡 Apartamentos Panorama <span class="stars">★★★☆☆</span></h3>
-      <p class="location">📍 Puerto del Carmen</p>
-      <p>Budget apartments with outdoor pool, central location 🏊</p>
-      <p><strong>Board Options:</strong> Self-Catering €70–€100, B&B €80–€110</p>
-
-      <div class="links">
-        <a href="https://www.booking.com" target="_blank">🛏️ Book on Booking.com</a>
-        <a href="https://www.tripadvisor.com" target="_blank">🔎 View on TripAdvisor</a>
-        <a href="https://maps.google.com/?q=Apartamentos+Panorama+Puerto+del+Carmen" target="_blank">📍 View on Maps</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section id="things-to-do">
-
-  <div class="activity-card single">
-
-    <h2>Things To Do</h2>
-
-    <p>
-      Lanzarote offers a wide range of activities, from wildlife parks to local markets.<br />
-      We recommend booking excursions in advance, especially in March.<br />
-      For organised trips and activities, visit 
-      <a href="https://www.travelon.world/" target="_blank" rel="noopener noreferrer">
-        TravelOnWorld
-      </a>.
-    </p>
-
-    <hr>
-
-    <h3>🌴 Things To Do in Lanzarote</h3>
-    <p class="sub">Transport, timings & excursion options at a glance</p>
-
-    <hr>
-
-    <div class="activity-block">
-      <h4>🐾 Rancho Texas Lanzarote Park (Day Visit)</h4>
-      <p>🚕 Puerto del Carmen: 5 mins (€5–€8) | 🚌 ~20 mins (€2–€3) | 🎟️ ~€40</p>
-      <p>🚕 Playa Blanca: 25 mins (€30–€35) | 🚌 ~40 mins (€3–€4) | 🎟️ ~€40</p>
-      <p>✔ FREE shuttle (Puerto del Carmen) | €5–€7 from Playa Blanca</p>
-    </div>
-
-    <hr>
-
-    <div class="activity-block">
-      <h4>🌙 Rancho Texas “Country Night”</h4>
-      <p>🚕 Puerto del Carmen: 5–10 mins (€5–€8) | 🎟️ ~€45</p>
-      <p>🚕 Playa Blanca: 25 mins (€30–€35) | 🎟️ ~€45</p>
-      <p>✔ FREE from Puerto del Carmen | €7–€10 from Playa Blanca</p>
-    </div>
-
-    <hr>
-
-    <div class="activity-block">
-      <h4>🛍️ Teguise Market (Sunday 09:00–14:00)</h4>
-      <p>🚕 Puerto del Carmen: 20 mins (€20–€25) | 🚌 30–40 mins (€2–€4)</p>
-      <p>🚕 Playa Blanca: 45–50 mins (€45–€50) | 🚌 60–75 mins (€3–€4)</p>
-      <p>💰 Guided excursions: €15–€25 per person</p>
-    </div>
-
-    <hr>
-
-    <div class="activity-block">
-      <h4>🌊 Playa Blanca Market (Wed & Sat 09:00–14:00)</h4>
-      <p>🚕 From Puerto del Carmen: ~30 mins (€35–€40)</p>
-      <p>🚕 From Playa Blanca: ~5–10 mins (€5–€7) | 🚌 10–15 mins (€1.40)</p>
-      <p>💰 Optional excursions available</p>
-    </div>
-
-    <hr>
-
-    <div class="activity-block">
-      <h4>⛴️ Fuerteventura Day Trip (Corralejo)</h4>
-      <p>🚕 To Playa Blanca port: 5–30 mins depending on location</p>
-      <p>⛴️ Ferry: ~25–30 mins</p>
-      <p>💰 Packages: €35–€50 per person</p>
-    </div>
-
-  </div>
-
-</section>
-
-<section id="food-drink">
-  <h2>🍽️ Restaurants & Bars</h2>
-  <p class="section-intro">Our curated favourites for dining 🍴, drinks 🍸, and brunch 🥞 in Lanzarote 🌴.</p>
-
-  <div class="cards luxury">
-
-    <!-- Playa Blanca -->
-
-    <div class="card">
-      <h3>🍛 Namaste India <span class="stars">★★★★☆</span></h3>
-      <p class="location">📍 Playa Blanca</p>
-      <p>Highly rated Indian cuisine with great service and generous portions 🍽️.</p>
-      <div class="links">
-        <a href="https://maps.google.com/?q=Namaste+India+Playa+Blanca+Lanzarote" target="_blank">📍 View on Maps</a>
-      </div>
-    </div>
-
-    <!-- Puerto del Carmen -->
-    <div class="card">
-      <h3>🥩 La Cascada <span class="stars">★★★★☆</span></h3>
-      <p class="location">📍 Old Town, Puerto del Carmen</p>
-      <p>Charming hidden gem known for steak 🥩, seafood 🐟, and a cosy atmosphere ✨.</p>
-      <div class="links">
-        <a href="https://maps.google.com/?q=La+Cascada+Puerto+del+Carmen" target="_blank">📍 View on Maps</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>🍸 Universo <span class="stars">★★★★☆</span></h3>
-      <p class="location">📍 Puerto del Carmen</p>
-      <p>Stylish café ☕ and cocktail bar 🍹; perfect for evening drinks and sunset views 🌅.</p>
-      <div class="links">
-        <a href="https://maps.google.com/?q=Universo+Puerto+del+Carmen" target="_blank">📍 View on Maps</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>🥞 Pinocchio <span class="stars">★★★★☆</span></h3>
-      <p class="location">📍 Puerto del Carmen</p>
-      <p>Instagrammable spot 📸, great for brunch 🥐 and photo-worthy meals ✨.</p>
-      <div class="links">
-        <a href="https://maps.google.com/?q=Pinocchio+Puerto+del+Carmen" target="_blank">📍 View on Maps</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>🥗 La Kalma <span class="stars">★★★★☆</span></h3>
-      <p class="location">📍 Puerto del Carmen</p>
-      <p>Relaxed brunch spot ☀️ with healthy options 🥑 and a peaceful vibe 🌿.</p>
-      <div class="links">
-        <a href="https://maps.google.com/?q=La+Kalma+Puerto+del+Carmen" target="_blank">📍 View on Maps</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>🍺 Heineken Bar <span class="stars">★★★★☆</span></h3>
-      <p class="location">📍 Puerto del Carmen</p>
-      <p>Great cocktails 🍸 and lively evening atmosphere 🎶.</p>
-      <div class="links">
-        <a href="https://maps.google.com/?q=Heineken+Bar+Puerto+del+Carmen" target="_blank">📍 View on Maps</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section id="island-history">
-  <h2>🌋 History of Lanzarote</h2>
-  <p class="section-intro">From volcanic origins 🌋 to a vibrant modern culture ✨, Lanzarote's history is as fascinating as its landscapes 🌴.</p>
-
-  <div class="history-content">
-
-    <h3>🏝️ Early Settlement</h3>
-    <p>The first inhabitants of Lanzarote were the <strong>Guanches</strong>, an indigenous Berber people who arrived around the first millennium BCE. They lived in caves 🪨 and simple settlements, leaving behind rock carvings and tools that tell the story of their daily life.</p>
-
-    <h3>⚔️ Spanish Conquest</h3>
-    <p>In the early 15th century, Lanzarote was conquered by the Kingdom of Castile under <strong>Jean de Béthencourt</strong>. The island became a key stopover for explorers 🧭, traders 💰, and pirates 🏴‍☠️ during the Age of Exploration.</p>
-
-    <h3>🌋 Volcanic Eruptions</h3>
-    <p>Between 1730 and 1736, Lanzarote experienced massive volcanic eruptions, particularly in the Timanfaya region. These eruptions destroyed villages 🏚️, farmland 🌾, and reshaped the island’s unique landscape, creating the stunning lava fields we see today.</p>
-
-    <h3>🏙️ Modern Era</h3>
-    <p>In the 20th century, Lanzarote transitioned from an agriculture-based economy 🌾 to tourism ✈️. Artist <strong>César Manrique</strong> helped shape sustainable development on the island, ensuring that modern resorts blend harmoniously with the natural landscape 🌿.</p>
-<h3>🌋 Volcanic Origins of Lanzarote</h3>
-<ul>
-  <li>🌍 Millions of years ago – Lanzarote begins forming from underwater volcanic eruptions on the ocean floor</li>
-  <li>🌋 Repeated eruptions – Layers of lava build up, gradually creating the island above sea level</li>
-  <li>🔥 1730–1736 – One of the most intense volcanic periods in history reshapes the island, covering vast areas in lava</li>
-  <li>🪨 Timanfaya landscape – Lava fields, craters, and volcanic rock create the island’s iconic scenery</li>
-  <li>🌱 Today – Volcanic soil supports unique agriculture (like Lanzarote wine 🍷) and defines the island’s natural beauty</li>
-</ul>
+    <button id="backToTop" aria-label="Back to top">↑</button>
 
   </div>
-</section>
-
-  <button id="backToTop">↑</button>
-  </main>
+</main>
 
 <footer role="contentinfo">
   💛 With love,<br />Sophie &amp; James
